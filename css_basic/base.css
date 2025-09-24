@@ -1,27 +1,354 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>My Mini-Blog on Space</title>
-</head>
-<body>
-    <header>
-        <h1>Space: The Final Frontier</h1>
-    </header>
-    <article>
-        <h2>Life on Mars?</h2>
-        <p>Scientists are exploring the possibility of life on Mars...</p>
-        <aside>
-            <h3>Mars Fact</h3>
-            <p>Mars has the largest dust storms in the solar system!</p>
-        </aside>
-        <figure>
-            <img src="mars.jpg" alt="The surface of Mars">
-            <figcaption>The red surface of Mars, as seen by the rover.</figcaption>
-        </figure>
-    </article>
-    <footer>
-        <p>Contact me at spacefan@example.com</p>
-    </footer>
-</body>
-</html>}
+/* Holberton School base CSS file */
+
+/* Basic reset and typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
+}
+
+li {
+    margin-bottom: 0.25em;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+/* Layout Elements */
+header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+main {
+    padding: 1rem;
+    min-height: calc(100vh - 200px);
+}
+
+article {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+aside {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-left: 3px solid #007bff;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+th, td {
+    padding: 0.75em;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Forms */
+input, textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.p-4 { padding: 1.5rem; }
+.p-5 { padding: 3rem; }
+
+/* Responsive Design for works_on_smartphone class */
+@media (max-width: 768px) {
+    /* Mobile typography adjustments */
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.25em;
+    }
+    
+    /* Responsive layout for works_on_smartphone class */
+    .works_on_smartphone main {
+        flex-direction: column;
+    }
+    
+    .works_on_smartphone article,
+    .works_on_smartphone aside {
+        flex: none;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .works_on_smartphone aside {
+        border-left: none;
+        border-top: 3px solid #007bff;
+        margin-top: 1rem;
+    }
+    
+    /* Mobile-friendly navigation */
+    .works_on_smartphone nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .works_on_smartphone nav li {
+        width: 100%;
+    }
+    
+    .works_on_smartphone nav a {
+        display: block;
+        padding: 0.75rem;
+        text-align: center;
+        border-radius: 0.25rem;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+    }
+    
+    /* Mobile padding adjustments */
+    .works_on_smartphone header,
+    .works_on_smartphone main,
+    .works_on_smartphone footer {
+        padding: 0.75rem;
+    }
+    
+    .works_on_smartphone article,
+    .works_on_smartphone aside {
+        padding: 0.75rem;
+    }
+    
+    /* Mobile table adjustments */
+    .works_on_smartphone table {
+        font-size: 0.875rem;
+    }
+    
+    .works_on_smartphone th,
+    .works_on_smartphone td {
+        padding: 0.5rem;
+    }
+    
+    /* Mobile form adjustments */
+    .works_on_smartphone input,
+    .works_on_smartphone textarea,
+    .works_on_smartphone select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .works_on_smartphone h1 {
+        font-size: 1.75em;
+    }
+    
+    .works_on_smartphone h2 {
+        font-size: 1.375em;
+    }
+    
+    .works_on_smartphone article,
+    .works_on_smartphone aside {
+        padding: 0.5rem;
+    }
+    
+    .works_on_smartphone nav a {
+        font-size: 0.9rem;
+        padding: 0.625rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    a {
+        text-decoration: underline;
+    }
+    
+    button {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Print styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    a, a:visited {
+        text-decoration: underline;
+    }
+    
+    header, footer, nav, aside {
+        display: none;
+    }
+    
+    article {
+        page-break-inside: avoid;
+    }
+}
