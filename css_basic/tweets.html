@@ -3,67 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My tweets pages</title>
+    <title>My Tweets</title>
     <link href="base.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body class="works_on_smartphone">
     <header>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tweets.html">Tweets</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <!-- ADD SAME LOGO -->
+                <li class="logo">&#9889;</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tweets.html">Tweets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>My Tweets</h1>
+        <p>Latest thoughts and updates</p>
     </header>
+    
     <main>
         <article>
-
-    <h1>Welcome to My HTML Learning Journey</h1>
-    
-    <p>This is my first complete HTML page! I'm learning the fundamentals of web development and HTML structure. Creating web pages has been an exciting journey of discovery, where I've learned how different HTML elements work together to create meaningful and accessible content.</p>
-    
-    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using a series of elements, which tell the browser how to display the content. Every element has a specific purpose, from headings that organize content hierarchically to paragraphs that contain the main text content.</p>
-    
-    <h2>What I've Learned So Far</h2>
-    
-    <p>Through my HTML studies, I've discovered the importance of proper document structure. Starting with the DOCTYPE declaration, every HTML document follows a logical hierarchy that includes the html element, head section for metadata, and body section for visible content. This structure ensures that browsers can properly interpret and display the webpage.</p>
-    
-    <p>One of the most important concepts I've grasped is semantic HTML - using elements for their intended purpose rather than just their appearance. This means using heading elements (h1, h2, h3) to create a proper content hierarchy, paragraph elements for text blocks, and ensuring that each element serves its semantic purpose in the document structure.</p>
-    
-    <h3>The Power of HTML Elements</h3>
-    
-    <a href="https://www.alxafrica.com/" target="_blank">
-        <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" 
-             alt="ALX Africa Logo - Software Engineering Program" 
-             class="clickable-image" 
-             width="300" 
-             height="auto">
-    </a>
-    
-    <p>Images and links are fundamental building blocks of the web. The image above is clickable and demonstrates how we can combine multiple HTML elements - an anchor tag wrapping an image element - to create interactive content. This ALX Africa logo represents the educational journey I'm on, learning software engineering skills through comprehensive, hands-on training.</p>
-    
-    <h2>Looking Forward</h2>
-    
-    <h3>Next Steps in Web Development</h3>
-    
-    <p>As I continue learning HTML, I'm excited to explore more advanced topics like forms, tables, and semantic elements. I'll also be diving into CSS for styling and JavaScript for interactivity. The foundation I'm building with proper HTML structure will serve me well as I progress to more complex web development concepts and eventually build full-stack applications.</p>
-    
-
-    <blockquote class="twitter-tweet">
-        <p lang="en" dir="ltr">Specialist AI tutors at xAI are adding huge value.  We will immediately surge our Specialist AI tutor team by 10x!<br><br>We are hiring across domains like STEM, finance, medicine, safety, and many more. Come join us to help build truth-seeking AGI!<br><br><a href="https://x.com/i/jobs/1845336351098667008">https://x.com/i/jobs/1845336351098667008</a></p>
-        &mdash; xAI (@xai) <a href="https://twitter.com/xai/status/1966677385056841884">September 13, 2025</a>
-    </blockquote>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    
-    <p><a href="index.html">Back to Homepage</a></p>
-    </article>
+            <h2>Recent Tweets</h2>
+            
+            <div class="tweet-container">
+                <blockquote class="twitter-tweet">
+                    <p>Just completed my first HTML/CSS project! Excited to keep learning web development. #coding #webdev</p>
+                    <cite>— Your Name (@yourhandle)</cite>
+                </blockquote>
+            </div>
+            
+            <div class="tweet-container">
+                <blockquote class="twitter-tweet">
+                    <p>Working on responsive design today. CSS Flexbox is amazing! #responsive #css</p>
+                    <cite>— Your Name (@yourhandle)</cite>
+                </blockquote>
+            </div>
+            
+            <h3>About My Tweets</h3>
+            <p>I share my learning journey, coding tips, and thoughts about web development. Follow me for regular updates on my progress and discoveries in the tech world!</p>
+        </article>
+        
         <aside>
+            <h3>Tweet Categories</h3>
             <p>placeholder to add comment thread later</p>
+            
+            <div class="tweet-topics">
+                <h4>Topics I Tweet About:</h4>
+                <ul class="topic-list">
+                    <li>&#128187; Web Development</li>
+                    <li>&#128218; Learning Resources</li>
+                    <li>&#128161; Coding Tips</li>
+                    <li>&#128640; Project Updates</li>
+                    <li>&#127775; Tech Trends</li>
+                </ul>
+            </div>
         </aside>
     </main>
+    
     <footer>
-        <p>Made by ADETOLA AGORO - <a href="https://www.linkedin.com/in/agoro-adetola-91146a76/" target="_blank">here</a>.</p>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
-
-
 </body>
 </html>

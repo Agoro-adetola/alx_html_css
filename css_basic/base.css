@@ -1,5 +1,4 @@
 /* Holberton School base CSS file */
-
 /* Basic reset and typography */
 * {
     box-sizing: border-box;
@@ -81,6 +80,15 @@ nav ul {
 
 nav li {
     margin: 0;
+}
+
+/* Logo styling - provided by the task */
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff6b35;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-right: 1em;
 }
 
 /* Layout Elements */
@@ -222,6 +230,12 @@ img {
         font-size: 1.25em;
     }
     
+    /* Logo adjustments for mobile */
+    .logo {
+        font-size: 1.5em;
+        margin-right: 0.5em;
+    }
+    
     /* Responsive layout for works_on_smartphone class */
     .works_on_smartphone main {
         flex-direction: column;
@@ -307,6 +321,10 @@ img {
     .works_on_smartphone nav a {
         font-size: 0.9rem;
         padding: 0.625rem;
+    }
+    
+    .logo {
+        font-size: 1.25em;
     }
 }
 
