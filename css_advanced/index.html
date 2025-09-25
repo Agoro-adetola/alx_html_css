@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn the art of smiling from professional instructors. Master different smile techniques with our comprehensive tutorials.">
+<meta name="keywords" content="smile training, smiling tutorials, smile lessons, happiness coaching">
+<meta name="author" content="Smileschool">
+<!-- Preconnect for better performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Required fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Spin+Cycle+OT&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/4a2b055604.js" crossorigin="anonymous"></script>
+<title>Smileschool - Learn the Art of Smiling</title>
+<style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+        
+        nav a:hover {
+            color: #007bff;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ff6b6b;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .emotion-spans {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .emotion-spans span {
+            background-color: #f8f9fa;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #007bff;
+            border: 2px solid #e9ecef;
+        }
+        
+        .instructor-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .instructor-card {
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .instructor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .instructor-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Testimonials Section */
+        .testimonial-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 3rem;
+            border-radius: 10px;
+        }
+        
+        .testimonial-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid #007bff;
+        }
+        
+        .testimonial-author {
+            text-align: right;
+        }
+        
+        .testimonial-author h3 {
+            margin-bottom: 0.25rem;
+            color: #333;
+        }
+        
+        .testimonial-author p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Tutorials Section */
+        .tutorials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tutorial-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background-color: #fff;
+        }
+        
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tutorial-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .tutorial-content {
+            padding: 1rem;
+        }
+        
+        .tutorial-instructor {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        
+        .tutorial-instructor img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .stars {
+            display: flex;
+            gap: 2px;
+            margin: 0.5rem 0;
+        }
+        
+        .stars i {
+            color: #ffc107;
+        }
+        
+        .duration {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Membership Section */
+        .membership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .membership-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease;
+        }
+        
+        .membership-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .membership-item img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .faq-item {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+        
+        .faq-question {
+            background-color: #e9ecef;
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+        
+        .faq-question:hover {
+            background-color: #dee2e6;
+        }
+        
+        .faq-answer {
+            padding: 1rem;
+            line-height: 1.6;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-icons i {
+            font-size: 1.5rem;
+            color: white;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .social-icons i:hover {
+            color: #007bff;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section,
+            .testimonial-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .instructor-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .emotion-spans {
+                justify-content: center;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            .tutorials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">
+<img src="https://fakeimg.pl/250x250?text=Sample+Logo" alt="Smileschool Logo" title="Smileschool Logo">
+</div>
+<ul>
+<li><a href="#course">COURSE</a></li>
+<li><a href="#pricing">PRICING</a></li>
+<li><a href="#login">LOGIN</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-section">
+<div class="hero-content">
+<h1>Get schooled</h1>
+<div class="emotion-spans">
+<span>SMILES</span>
+<span>GRIN</span>
+<span>LAUGH</span>
+</div>
+<button>REGISTER FOR FREE</button>
+</div>
+<div class="instructor-section">
+<h2>Learn from the pros</h2>
+<div class="instructor-grid">
+<div class="instructor-card">
+<img src="./images/1 (3).png" alt="Phillip Massey portrait" title="Phillip Massey - Smile of the year 2018-2019">
+<h3>Phillip Massey</h3>
+<p>« Smile of the year » 2018 - 2019</p>
+</div>
+<div class="instructor-card">
+<img src="./images/6.png" alt="Nannie Lawrence portrait" title="Nannie Lawrence - Best little smile 2017">
+<h3>Nannie Lawrence</h3>
+<p>Best « little smile » 2017</p>
+</div>
+<div class="instructor-card">
+<img src="./images/7.png" alt="Bruce Walters portrait" title="Bruce Walters - Best Friend Smile live performance 2019">
+<h3>Bruce Walters</h3>
+<p>Best « Friend Smile » live performance 2019</p>
+</div>
+<div class="instructor-card">
+<img src="./images/8.png" alt="Henry Hughes portrait" title="Henry Hughes - 24h smiles winner 2016-2019">
+<h3>Henry Hughes</h3>
+<p>« 24h smiles » winner 2016 - 2019</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="testimonial-section">
+<div class="testimonial-image">
+<img src="./images/Bitmap.png" alt="Happy student testimonial" title="Student testimonial image">
+</div>
+<div class="testimonial-content">
+<blockquote>« Those tutorials are concise and go straight to the point. I can't think of a better place to learn smiling. And it's so fun! »</blockquote>
+<div class="testimonial-author">
+<h3>NAME</h3>
+<p>weather presenter</p>
+</div>
+</div>
+</section>
+<!-- Most Popular Tutorials Section -->
+<section id="tutorials">
+<h2>Most popular tutorials</h2>
+<div class="tutorials-grid">
+<div class="tutorial-card">
+<img src="./images/Bitmap (1).png" alt="Diagonal Smile tutorial thumbnail" title="Diagonal Smile tutorial">
+<div class="tutorial-content">
+<h3>Diagonal Smile</h3>
+<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+<div class="tutorial-instructor">
+<img src="./images/1 (3).png" alt="Phillip Massey instructor" title="Phillip Massey instructor">
+<h4>Phillip Massey</h4>
+</div>
+<div class="stars">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<p class="duration">8 min</p>
+</div>
+</div>
+<div class="tutorial-card">
+<img src="./images/Bitmap (4).png" alt="Happy Smile tutorial thumbnail" title="Happy Smile tutorial">
+<div class="tutorial-content">
+<h3>Happy Smile</h3>
+<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+<div class="tutorial-instructor">
+<img src="./images/1 (3).png" alt="Phillip Massey instructor" title="Phillip Massey instructor">
+<h4>Phillip Massey</h4>
+</div>
+<div class="stars">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<p class="duration">8 min</p>
+</div>
+</div>
+<div class="tutorial-card">
+<img src="./images/Bitmap (3).png" alt="Natural Smile tutorial thumbnail" title="Natural Smile tutorial">
+<div class="tutorial-content">
+<h3>Natural Smile</h3>
+<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+<div class="tutorial-instructor">
+<img src="./images/1 (3).png" alt="Phillip Massey instructor" title="Phillip Massey instructor">
+<h4>Phillip Massey</h4>
+</div>
+<div class="stars">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<p class="duration">8 min</p>
+</div>
+</div>
+<div class="tutorial-card">
+<img src="./images/Bitmap (2).png" alt="Sad Smile tutorial thumbnail" title="Sad Smile tutorial">
+<div class="tutorial-content">
+<h3>Sad Smile</h3>
+<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+<div class="tutorial-instructor">
+<img src="./images/1 (3).png" alt="Phillip Massey instructor" title="Phillip Massey instructor">
+<h4>Phillip Massey</h4>
+</div>
+<div class="stars">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<p class="duration">8 min</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Free Membership Section -->
+<section id="membership">
+<h2>Free membership</h2>
+<div class="membership-grid">
+<div class="membership-item">
+<img src="./images/smile.svg" alt="Membership benefit icon" title="Lorem Ipsum Benefit">
+<h3>Lorem Ipsum</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div class="membership-item">
+<img src="./images/smile.svg" alt="Membership benefit icon" title="Lorem Ipsum Benefit">
+<h3>Lorem Ipsum</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div class="membership-item">
+<img src="./images/smile.svg" alt="Membership benefit icon" title="Lorem Ipsum Benefit">
+<h3>Lorem Ipsum</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div class="membership-item">
+<img src="./images/smile.svg" alt="Membership benefit icon" title="Lorem Ipsum Benefit">
+<h3>Lorem Ipsum</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+<div class="cta-button">
+<button>REGISTER FOR FREE</button>
+</div>
+</section>
+<!-- FAQ Section -->
+<section id="faq">
+<h2>F.A.Q</h2>
+<div class="faq-container">
+<div class="faq-item">
+<div class="faq-question">
+<h3>How does this work?</h3>
+</div>
+<div class="faq-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+<div class="faq-question">
+<h3>How does this work?</h3>
+</div>
+<div class="faq-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<h3>How does this work?</h3>
+</div>
+<div class="faq-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+<div class="faq-question">
+<h3>How does this work?</h3>
+</div>
+<div class="faq-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-content">
+<div class="footer-logo">
+<img src="https://fakeimg.pl/250x250?text=Sample+Logo" alt="Smileschool Logo" title="Smileschool Logo">
+<div class="social-icons">
+<i class="fa-brands fa-facebook" title="Facebook"></i>
+<i class="fa-brands fa-twitter" title="Twitter"></i>
+<i class="fa-brands fa-instagram" title="Instagram"></i>
+</div>
+</div>
+<p>&copy; smileschool 2025</p>
+</div>
+</footer>
+<script>
+        // Interactive FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isOpen = answer.classList.contains('active');
+                    
+                    // Close all other answers
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.classList.remove('active');
+                    });
+                    
+                    // Toggle current answer
+                    answer.classList.toggle('active');
+                });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+            });
+        });
+</script>
+</body>
+</html>
